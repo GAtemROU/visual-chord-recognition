@@ -9,8 +9,11 @@ case of classical instruments like the guitar, piano, or harp.
 Our approach centers on utilizing visual data exclusively
 to address this problem.
 
+
 ## Goal
 The main goal of the project was to recognize 14 different chords: 7 major and 7 minor.
+
+
 ## Methodology
 This classification problem is approached using Convolutional Neural Networks with multiple stages of transfer learning.
 
@@ -18,6 +21,10 @@ Several pretrained models have been considered to find the best fit to the data.
 
 The concept of transfer learning is not new, it is simply to take pretrained network and apply it on our problem. 
 What was different in our case is that training on the whole data lead to 20% less accuracy comparing to making an intermidiate step in the middle. This step is to firstly train network and less diverse data and then switch to the whole problem. This led to 20% improvement on validation data.
+
+## Data
+We collected the majority of the dataset ourselves, capturing images of people holding chords from various distances and orientations. Additionally, open-source images were incorporated to enhance diversity, resulting in a total of 472 images across 14 chords.
+
 ## Results
 Our final model gets 90%+ accuracy on the simple test created from the images of same person we had during training and 60% on the hard test which was created from the completely unseen data.
 
